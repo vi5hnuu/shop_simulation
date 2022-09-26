@@ -7,10 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Mini-Shop</title>
   <link rel="stylesheet" href="assets/styles/app.css">
-  <script src="assets/scripts/app.js" defer></script>
+  <script src="assets/scripts/app1.js" defer></script>
+  <script src="assets/scripts/test.js" defer></script>
 </head>
 
 <body>
+  <div class="backdrop hidden"></div>
   <main id="main">
     <div class="cart-total">
       <p>Total : $<span>00.00</span></p>
@@ -72,6 +74,21 @@
       </div> -->
     </div>
   </main>
+  <div class="reciet hidden">
+    <div class="info">
+      <div class="info-block">
+        <p>Product</p>
+        <p>Per Item Price</p>
+        <p>Total Per Item</p>
+      </div>
+      <!-- <div class="info-block">
+        <p>Chair x 10</p>
+        <p>$100</p>
+        <p>$1000</p>
+      </div> -->
+    </div>
+    <Button class="btn btn-confirm">Confirm</Button>
+  </div>
 </body>
 
 </html>
