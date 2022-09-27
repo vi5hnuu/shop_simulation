@@ -56,6 +56,7 @@ class Cart {
         } else {
             this.#cartItemsMp.set(product.pid, { pName: product.name, pPrice: product.price, quantity: 1 })
         }
+        console.log(this.#cartItemsMp);
     }
     cartTotal() {
         let total = 0.0
@@ -128,6 +129,13 @@ class Shop extends Cart {
     order() {
         this.#toggleShowModal()
         const modal = document.querySelector('.reciet')
+        modal.querySelector('.info').innerHTML = `
+            <div class="info-block">
+                <p>Product</p>
+                <p>Per Item Price</p>
+                <p>Total Per Item</p>
+            </div>
+        `
         for (const item of this.cartSummary()) {
             const ht = `
             <div class="info-block">
@@ -178,9 +186,4 @@ defaultProducts.forEach((obj) => {
 })
 //////////////////
 
-
-const btnOrder = document.querySelector('.btn-order')
-btnOrder.addEventListener('click', () => {
-    //
-})
 
